@@ -3,7 +3,7 @@
 -----
 
 ## Installation
-1. Download the javascript file from the [release page](https://github.com/strongrex2001/AStyle.js/releases).  
+1. Download the javascript file from the [release page](https://github.com/strongrex2001/AStyle.js/releases). (The js file is optimized. About 1MB in size and can format about 20000 lines of C++ code per second.)  
 2. Include the file in the web page where you want to use AStyle to format codes. For Example:  
 ```html
 <script language="javascript" src="AStyle_v0.3.js"></script>
@@ -36,7 +36,7 @@ Where param1..4 are command-line parameters. Accepts the same as those in AStyle
 ## Working with Source
 *Work on the AStyle Core is not discussed here.*  
 The modified part and also the export logic is at the very bottom of `astyle_main.cpp`, where you can preprocess the parameters you want to pass from javascript code according to Emscripten and AStyle specifications.  
-Building the code is quite easy. Just get Emscripten ready and run this command:  
+Building the code is quite easy. Just get Emscripten ready and run this command (params can be changed to your flavor):  
 ```bash
 <path to python2 executable> <path to emcc.py> --emscripten-cxx ASFormatter.cpp ASLocalizer.cpp ASResource.cpp astyle_main.cpp ASBeautifier.cpp ASEnhancer.cpp -std=c++11 -O3 -s INLINING_LIMIT=1 --memory-init-file 0 -s MODULARIZE=1 -s EXPORT_NAME='AStyle'
 ```  
