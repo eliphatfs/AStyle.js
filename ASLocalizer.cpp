@@ -96,7 +96,7 @@ ASLocalizer::ASLocalizer()
 	char* localeName = setlocale(LC_ALL, "");
 	if (localeName == nullptr)		// use the english (ascii) defaults
 	{
-		fprintf(stderr, "\n%s\n\n", "Cannot set native locale, reverting to English");
+		// fprintf(stderr, "\n%s\n\n", "Cannot set native locale, reverting to English");
 		setTranslationClass();
 		return;
 	}
@@ -333,7 +333,7 @@ string Translation::convertToMultiByte(const wstring& wideStr) const
 	{
 		if (!msgDisplayed)
 		{
-			fprintf(stderr, "\n%s\n\n", "Cannot convert to multi-byte string, reverting to English");
+			// fprintf(stderr, "\n%s\n\n", "Cannot convert to multi-byte string, reverting to English");
 			msgDisplayed = true;
 		}
 		return "";
@@ -344,7 +344,7 @@ string Translation::convertToMultiByte(const wstring& wideStr) const
 	{
 		if (!msgDisplayed)
 		{
-			fprintf(stderr, "\n%s\n\n", "Bad memory alloc for multi-byte string, reverting to English");
+			// fprintf(stderr, "\n%s\n\n", "Bad memory alloc for multi-byte string, reverting to English");
 			msgDisplayed = true;
 		}
 		return "";
@@ -414,7 +414,7 @@ string& Translation::translate(const string& stringIn) const
 Bulgarian::Bulgarian()	// български
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"Форматиран  %s\n");		// should align with unchanged
+	/*addPair("Formatted  %s\n", L"Форматиран  %s\n");		// should align with unchanged
 	addPair("Unchanged  %s\n", L"Непроменен  %s\n");		// should align with formatted
 	addPair("Directory  %s\n", L"директория  %s\n");
 	addPair("Default option file  %s\n", L"Файл с опции по подразбиране  %s\n");
@@ -442,13 +442,13 @@ Bulgarian::Bulgarian()	// български
 	addPair("No file to process %s\n", L"Не файл за обработка %s\n");
 	addPair("Did you intend to use --recursive", L"Знаете ли възнамерявате да използвате --recursive");
 	addPair("Cannot process UTF-32 encoding", L"Не може да са UTF-32 кодиране");
-	addPair("Artistic Style has terminated\n", L"Artistic Style е прекратено\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style е прекратено\n");*/
 }
 
 ChineseSimplified::ChineseSimplified()	// 中文（简体）
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"格式化  %s\n");		// should align with unchanged
+	/*addPair("Formatted  %s\n", L"格式化  %s\n");		// should align with unchanged
 	addPair("Unchanged  %s\n", L"未改变  %s\n");		// should align with formatted
 	addPair("Directory  %s\n", L"目录  %s\n");
 	addPair("Default option file  %s\n", L"默认选项文件  %s\n");
@@ -476,13 +476,13 @@ ChineseSimplified::ChineseSimplified()	// 中文（简体）
 	addPair("No file to process %s\n", L"没有文件可处理 %s\n");
 	addPair("Did you intend to use --recursive", L"你打算使用 --recursive");
 	addPair("Cannot process UTF-32 encoding", L"不能处理UTF-32编码");
-	addPair("Artistic Style has terminated\n", L"Artistic Style 已经终止运行\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style 已经终止运行\n");*/
 }
 
 ChineseTraditional::ChineseTraditional()	// 中文（繁體）
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"格式化  %s\n");		// should align with unchanged
+	/*addPair("Formatted  %s\n", L"格式化  %s\n");		// should align with unchanged
 	addPair("Unchanged  %s\n", L"未改變  %s\n");		// should align with formatted
 	addPair("Directory  %s\n", L"目錄  %s\n");
 	addPair("Default option file  %s\n", L"默認選項文件  %s\n");
@@ -510,13 +510,13 @@ ChineseTraditional::ChineseTraditional()	// 中文（繁體）
 	addPair("No file to process %s\n", L"沒有文件可處理 %s\n");
 	addPair("Did you intend to use --recursive", L"你打算使用 --recursive");
 	addPair("Cannot process UTF-32 encoding", L"不能處理UTF-32編碼");
-	addPair("Artistic Style has terminated\n", L"Artistic Style 已經終止運行\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style 已經終止運行\n");*/
 }
 
 Dutch::Dutch()	// Nederlandse
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"Geformatteerd  %s\n");	// should align with unchanged
+	/*addPair("Formatted  %s\n", L"Geformatteerd  %s\n");	// should align with unchanged
 	addPair("Unchanged  %s\n", L"Onveranderd    %s\n");	// should align with formatted
 	addPair("Directory  %s\n", L"Directory  %s\n");
 	addPair("Default option file  %s\n", L"Standaard optie bestand  %s\n");
@@ -544,7 +544,7 @@ Dutch::Dutch()	// Nederlandse
 	addPair("No file to process %s\n", L"Geen bestand te verwerken %s\n");
 	addPair("Did you intend to use --recursive", L"Hebt u van plan bent te gebruiken --recursive");
 	addPair("Cannot process UTF-32 encoding", L"Kan niet verwerken UTF-32 codering");
-	addPair("Artistic Style has terminated\n", L"Artistic Style heeft beëindigd\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style heeft beëindigd\n");*/
 }
 
 English::English() = default;
@@ -553,7 +553,7 @@ English::English() = default;
 Estonian::Estonian()	// Eesti
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"Formaadis  %s\n");		// should align with unchanged
+	/*addPair("Formatted  %s\n", L"Formaadis  %s\n");		// should align with unchanged
 	addPair("Unchanged  %s\n", L"Muutumatu  %s\n");		// should align with formatted
 	addPair("Directory  %s\n", L"Kataloog  %s\n");
 	addPair("Default option file  %s\n", L"Vaikefunktsioonifail  %s\n");
@@ -581,13 +581,13 @@ Estonian::Estonian()	// Eesti
 	addPair("No file to process %s\n", L"No faili töötlema %s\n");
 	addPair("Did you intend to use --recursive", L"Kas te kavatsete kasutada --recursive");
 	addPair("Cannot process UTF-32 encoding", L"Ei saa töödelda UTF-32 kodeeringus");
-	addPair("Artistic Style has terminated\n", L"Artistic Style on lõpetatud\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style on lõpetatud\n");*/
 }
 
 Finnish::Finnish()	// Suomeksi
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"Muotoiltu  %s\n");	// should align with unchanged
+	/*addPair("Formatted  %s\n", L"Muotoiltu  %s\n");	// should align with unchanged
 	addPair("Unchanged  %s\n", L"Ennallaan  %s\n");	// should align with formatted
 	addPair("Directory  %s\n", L"Directory  %s\n");
 	addPair("Default option file  %s\n", L"Oletusasetustiedosto  %s\n");
@@ -615,13 +615,13 @@ Finnish::Finnish()	// Suomeksi
 	addPair("No file to process %s\n", L"Ei tiedostoa käsitellä %s\n");
 	addPair("Did you intend to use --recursive", L"Oliko aiot käyttää --recursive");
 	addPair("Cannot process UTF-32 encoding", L"Ei voi käsitellä UTF-32 koodausta");
-	addPair("Artistic Style has terminated\n", L"Artistic Style on päättynyt\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style on päättynyt\n");*/
 }
 
 French::French()	// Française
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"Formaté    %s\n");	// should align with unchanged
+	/*addPair("Formatted  %s\n", L"Formaté    %s\n");	// should align with unchanged
 	addPair("Unchanged  %s\n", L"Inchangée  %s\n");	// should align with formatted
 	addPair("Directory  %s\n", L"Répertoire  %s\n");
 	addPair("Default option file  %s\n", L"Fichier d'option par défaut  %s\n");
@@ -649,13 +649,13 @@ French::French()	// Française
 	addPair("No file to process %s\n", L"Aucun fichier à traiter %s\n");
 	addPair("Did you intend to use --recursive", L"Avez-vous l'intention d'utiliser --recursive");
 	addPair("Cannot process UTF-32 encoding", L"Impossible de traiter codage UTF-32");
-	addPair("Artistic Style has terminated\n", L"Artistic Style a mis fin\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style a mis fin\n");*/
 }
 
 German::German()	// Deutsch
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"Formatiert   %s\n");	// should align with unchanged
+	/*addPair("Formatted  %s\n", L"Formatiert   %s\n");	// should align with unchanged
 	addPair("Unchanged  %s\n", L"Unverändert  %s\n");	// should align with formatted
 	addPair("Directory  %s\n", L"Verzeichnis  %s\n");
 	addPair("Default option file  %s\n", L"Standard-Optionsdatei  %s\n");
@@ -683,13 +683,13 @@ German::German()	// Deutsch
 	addPair("No file to process %s\n", L"Keine Datei zu verarbeiten %s\n");
 	addPair("Did you intend to use --recursive", L"Haben Sie verwenden möchten --recursive");
 	addPair("Cannot process UTF-32 encoding", L"Nicht verarbeiten kann UTF-32 Codierung");
-	addPair("Artistic Style has terminated\n", L"Artistic Style ist beendet\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style ist beendet\n");*/
 }
 
 Greek::Greek()	// ελληνικά
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"Διαμορφωμένη  %s\n");	// should align with unchanged
+	/*addPair("Formatted  %s\n", L"Διαμορφωμένη  %s\n");	// should align with unchanged
 	addPair("Unchanged  %s\n", L"Αμετάβλητος   %s\n");	// should align with formatted
 	addPair("Directory  %s\n", L"Κατάλογος  %s\n");
 	addPair("Default option file  %s\n", L"Προεπιλεγμένο αρχείο επιλογών  %s\n");
@@ -717,7 +717,7 @@ Greek::Greek()	// ελληνικά
 	addPair("No file to process %s\n", L"Δεν υπάρχει αρχείο για την επεξεργασία %s\n");
 	addPair("Did you intend to use --recursive", L"Μήπως σκοπεύετε να χρησιμοποιήσετε --recursive");
 	addPair("Cannot process UTF-32 encoding", L"δεν μπορεί να επεξεργαστεί UTF-32 κωδικοποίηση");
-	addPair("Artistic Style has terminated\n", L"Artistic Style έχει λήξει\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style έχει λήξει\n");*/
 }
 
 Hindi::Hindi()	// हिन्दी
@@ -725,7 +725,7 @@ Hindi::Hindi()	// हिन्दी
 {
 	// NOTE: Scintilla based editors (CodeBlocks) cannot always edit Hindi.
 	//       Use Visual Studio instead.
-	addPair("Formatted  %s\n", L"स्वरूपित किया  %s\n");	// should align with unchanged
+	/*addPair("Formatted  %s\n", L"स्वरूपित किया  %s\n");	// should align with unchanged
 	addPair("Unchanged  %s\n", L"अपरिवर्तित     %s\n");	// should align with formatted
 	addPair("Directory  %s\n", L"निर्देशिका  %s\n");
 	addPair("Default option file  %s\n", L"डिफ़ॉल्ट विकल्प फ़ाइल  %s\n");
@@ -753,13 +753,13 @@ Hindi::Hindi()	// हिन्दी
 	addPair("No file to process %s\n", L"कोई फ़ाइल %s प्रक्रिया के लिए\n");
 	addPair("Did you intend to use --recursive", L"क्या आप उपयोग करना चाहते हैं --recursive");
 	addPair("Cannot process UTF-32 encoding", L"UTF-32 कूटबन्धन प्रक्रिया नहीं कर सकते");
-	addPair("Artistic Style has terminated\n", L"Artistic Style समाप्त किया है\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style समाप्त किया है\n");*/
 }
 
 Hungarian::Hungarian()	// Magyar
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"Formázott    %s\n");	// should align with unchanged
+	/*addPair("Formatted  %s\n", L"Formázott    %s\n");	// should align with unchanged
 	addPair("Unchanged  %s\n", L"Változatlan  %s\n");	// should align with formatted
 	addPair("Directory  %s\n", L"Címjegyzék  %s\n");
 	addPair("Default option file  %s\n", L"Alapértelmezett beállítási fájl  %s\n");
@@ -787,13 +787,13 @@ Hungarian::Hungarian()	// Magyar
 	addPair("No file to process %s\n", L"Nincs fájl feldolgozása %s\n");
 	addPair("Did you intend to use --recursive", L"Esetleg a használni kívánt --recursive");
 	addPair("Cannot process UTF-32 encoding", L"Nem tudja feldolgozni UTF-32 kódolással");
-	addPair("Artistic Style has terminated\n", L"Artistic Style megszűnt\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style megszűnt\n");*/
 }
 
 Italian::Italian()	// Italiano
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"Formattata  %s\n");	// should align with unchanged
+	/*addPair("Formatted  %s\n", L"Formattata  %s\n");	// should align with unchanged
 	addPair("Unchanged  %s\n", L"Immutato    %s\n");	// should align with formatted
 	addPair("Directory  %s\n", L"Elenco  %s\n");
 	addPair("Default option file  %s\n", L"File di opzione predefinito  %s\n");
@@ -821,13 +821,13 @@ Italian::Italian()	// Italiano
 	addPair("No file to process %s\n", L"Nessun file al processo %s\n");
 	addPair("Did you intend to use --recursive", L"Hai intenzione di utilizzare --recursive");
 	addPair("Cannot process UTF-32 encoding", L"Non è possibile processo di codifica UTF-32");
-	addPair("Artistic Style has terminated\n", L"Artistic Style ha terminato\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style ha terminato\n");*/
 }
 
 Japanese::Japanese()	// 日本語
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"フォーマット済みの  %s\n");		// should align with unchanged
+	/*addPair("Formatted  %s\n", L"フォーマット済みの  %s\n");		// should align with unchanged
 	addPair("Unchanged  %s\n", L"変わりません        %s\n");		// should align with formatted
 	addPair("Directory  %s\n", L"ディレクトリ  %s\n");
 	addPair("Default option file  %s\n", L"デフォルトオプションファイル  %s\n");
@@ -855,13 +855,13 @@ Japanese::Japanese()	// 日本語
 	addPair("No file to process %s\n", L"いいえファイルは処理しないように %s\n");
 	addPair("Did you intend to use --recursive", L"あなたは--recursive使用するつもりでした");
 	addPair("Cannot process UTF-32 encoding", L"UTF - 32エンコーディングを処理できません");
-	addPair("Artistic Style has terminated\n", L"Artistic Style 終了しました\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style 終了しました\n");*/
 }
 
 Korean::Korean()	// 한국의
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"수정됨    %s\n");		// should align with unchanged
+	/*addPair("Formatted  %s\n", L"수정됨    %s\n");		// should align with unchanged
 	addPair("Unchanged  %s\n", L"변경없음  %s\n");		// should align with formatted
 	addPair("Directory  %s\n", L"디렉토리  %s\n");
 	addPair("Default option file  %s\n", L"기본 옵션 파일  %s\n");
@@ -889,13 +889,13 @@ Korean::Korean()	// 한국의
 	addPair("No file to process %s\n", L"처리할 파일이 없습니다 %s\n");
 	addPair("Did you intend to use --recursive", L"--recursive 를 사용하고자 하십니까");
 	addPair("Cannot process UTF-32 encoding", L"UTF-32 인코딩을 처리할 수 없습니다");
-	addPair("Artistic Style has terminated\n", L"Artistic Style를 종료합니다\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style를 종료합니다\n");*/
 }
 
 Norwegian::Norwegian()	// Norsk
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"Formatert  %s\n");		// should align with unchanged
+	/*addPair("Formatted  %s\n", L"Formatert  %s\n");		// should align with unchanged
 	addPair("Unchanged  %s\n", L"Uendret    %s\n");		// should align with formatted
 	addPair("Directory  %s\n", L"Katalog  %s\n");
 	addPair("Default option file  %s\n", L"Standard alternativfil  %s\n");
@@ -923,13 +923,13 @@ Norwegian::Norwegian()	// Norsk
 	addPair("No file to process %s\n", L"Ingen fil å behandle %s\n");
 	addPair("Did you intend to use --recursive", L"Har du tenkt å bruke --recursive");
 	addPair("Cannot process UTF-32 encoding", L"Kan ikke behandle UTF-32 koding");
-	addPair("Artistic Style has terminated\n", L"Artistic Style har avsluttet\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style har avsluttet\n");*/
 }
 
 Polish::Polish()	// Polski
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"Sformatowany  %s\n");	// should align with unchanged
+	/*addPair("Formatted  %s\n", L"Sformatowany  %s\n");	// should align with unchanged
 	addPair("Unchanged  %s\n", L"Niezmienione  %s\n");	// should align with formatted
 	addPair("Directory  %s\n", L"Katalog  %s\n");
 	addPair("Default option file  %s\n", L"Domyślny plik opcji  %s\n");
@@ -957,13 +957,13 @@ Polish::Polish()	// Polski
 	addPair("No file to process %s\n", L"Brak pliku do procesu %s\n");
 	addPair("Did you intend to use --recursive", L"Czy masz zamiar używać --recursive");
 	addPair("Cannot process UTF-32 encoding", L"Nie można procesu kodowania UTF-32");
-	addPair("Artistic Style has terminated\n", L"Artistic Style został zakończony\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style został zakończony\n");*/
 }
 
 Portuguese::Portuguese()	// Português
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"Formatado   %s\n");	// should align with unchanged
+	/*addPair("Formatted  %s\n", L"Formatado   %s\n");	// should align with unchanged
 	addPair("Unchanged  %s\n", L"Inalterado  %s\n");	// should align with formatted
 	addPair("Directory  %s\n", L"Diretório  %s\n");
 	addPair("Default option file  %s\n", L"Arquivo de opção padrão  %s\n");
@@ -991,13 +991,13 @@ Portuguese::Portuguese()	// Português
 	addPair("No file to process %s\n", L"Nenhum arquivo para processar %s\n");
 	addPair("Did you intend to use --recursive", L"Será que você pretende usar --recursive");
 	addPair("Cannot process UTF-32 encoding", L"Não pode processar a codificação UTF-32");
-	addPair("Artistic Style has terminated\n", L"Artistic Style terminou\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style terminou\n");*/
 }
 
 Romanian::Romanian()	// Română
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"Formatat    %s\n");	// should align with unchanged
+	/*addPair("Formatted  %s\n", L"Formatat    %s\n");	// should align with unchanged
 	addPair("Unchanged  %s\n", L"Neschimbat  %s\n");	// should align with formatted
 	addPair("Directory  %s\n", L"Director  %s\n");
 	addPair("Default option file  %s\n", L"Fișier opțional implicit  %s\n");
@@ -1025,13 +1025,13 @@ Romanian::Romanian()	// Română
 	addPair("No file to process %s\n", L"Nu există un fișier pentru a procesa %s\n");
 	addPair("Did you intend to use --recursive", L"V-ați intenționați să utilizați --recursive");
 	addPair("Cannot process UTF-32 encoding", L"Nu se poate procesa codificarea UTF-32");
-	addPair("Artistic Style has terminated\n", L"Artistic Style a terminat\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style a terminat\n");*/
 }
 
 Russian::Russian()	// русский
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"Форматированный  %s\n");	// should align with unchanged
+	/*addPair("Formatted  %s\n", L"Форматированный  %s\n");	// should align with unchanged
 	addPair("Unchanged  %s\n", L"без изменений    %s\n");	// should align with formatted
 	addPair("Directory  %s\n", L"каталог  %s\n");
 	addPair("Default option file  %s\n", L"Файл с опцией по умолчанию  %s\n");
@@ -1059,13 +1059,13 @@ Russian::Russian()	// русский
 	addPair("No file to process %s\n", L"Нет файлов для обработки %s\n");
 	addPair("Did you intend to use --recursive", L"Неужели вы собираетесь использовать --recursive");
 	addPair("Cannot process UTF-32 encoding", L"Не удается обработать UTF-32 кодировке");
-	addPair("Artistic Style has terminated\n", L"Artistic Style прекратил\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style прекратил\n");*/
 }
 
 Spanish::Spanish()	// Español
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"Formato     %s\n");	// should align with unchanged
+	/*addPair("Formatted  %s\n", L"Formato     %s\n");	// should align with unchanged
 	addPair("Unchanged  %s\n", L"Inalterado  %s\n");	// should align with formatted
 	addPair("Directory  %s\n", L"Directorio  %s\n");
 	addPair("Default option file  %s\n", L"Archivo de opciones predeterminado  %s\n");
@@ -1093,13 +1093,13 @@ Spanish::Spanish()	// Español
 	addPair("No file to process %s\n", L"No existe el fichero a procesar %s\n");
 	addPair("Did you intend to use --recursive", L"Se va a utilizar --recursive");
 	addPair("Cannot process UTF-32 encoding", L"No se puede procesar la codificación UTF-32");
-	addPair("Artistic Style has terminated\n", L"Artistic Style ha terminado\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style ha terminado\n");*/
 }
 
 Swedish::Swedish()	// Svenska
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"Formaterade  %s\n");	// should align with unchanged
+	/*addPair("Formatted  %s\n", L"Formaterade  %s\n");	// should align with unchanged
 	addPair("Unchanged  %s\n", L"Oförändrade  %s\n");	// should align with formatted
 	addPair("Directory  %s\n", L"Katalog  %s\n");
 	addPair("Default option file  %s\n", L"Standardalternativsfil  %s\n");
@@ -1127,13 +1127,13 @@ Swedish::Swedish()	// Svenska
 	addPair("No file to process %s\n", L"Ingen fil att bearbeta %s\n");
 	addPair("Did you intend to use --recursive", L"Har du för avsikt att använda --recursive");
 	addPair("Cannot process UTF-32 encoding", L"Kan inte hantera UTF-32 kodning");
-	addPair("Artistic Style has terminated\n", L"Artistic Style har upphört\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style har upphört\n");*/
 }
 
 Ukrainian::Ukrainian()	// Український
 // build the translation vector in the Translation base class
 {
-	addPair("Formatted  %s\n", L"форматований  %s\n");	// should align with unchanged
+	/*addPair("Formatted  %s\n", L"форматований  %s\n");	// should align with unchanged
 	addPair("Unchanged  %s\n", L"без змін      %s\n");	// should align with formatted
 	addPair("Directory  %s\n", L"Каталог  %s\n");
 	addPair("Default option file  %s\n", L"Файл параметра за замовчуванням  %s\n");
@@ -1161,7 +1161,7 @@ Ukrainian::Ukrainian()	// Український
 	addPair("No file to process %s\n", L"Немає файлів для обробки %s\n");
 	addPair("Did you intend to use --recursive", L"Невже ви збираєтеся використовувати --recursive");
 	addPair("Cannot process UTF-32 encoding", L"Не вдається обробити UTF-32 кодуванні");
-	addPair("Artistic Style has terminated\n", L"Artistic Style припинив\n");
+	addPair("Artistic Style has terminated\n", L"Artistic Style припинив\n");*/
 }
 
 
