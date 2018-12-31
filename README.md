@@ -3,10 +3,10 @@
 -----
 
 ## Installation
-1. Download the javascript file from the [release page](https://github.com/strongrex2001/AStyle.js/releases). The js file is optimized, about 1MB in size and can format about 20000 lines of C++ code per second. Small impacts on memory usage.  
+1. Download the javascript file from the [release page](https://github.com/strongrex2001/AStyle.js/releases). The js file is optimized, about 732KB in size (190KB gzipped) and can format about 20000 lines of C++ code per second. Small impacts on memory usage.  
 2. Include the file in the web page where you want to use AStyle to format codes. For Example:  
 ```html
-<script language="javascript" src="AStyle_v0.3.js"></script>
+<script language="javascript" src="AStyle_v1.0.js"></script>
 ```  
 3. Call the formatter somewhere else in your js code.  
 
